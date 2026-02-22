@@ -4,8 +4,9 @@ Christian Lepard
 styles.css
 */
 
-/* CSS Reset: removes default browser spacing */
-body, header, nav, main, footer, h1, h2, p, ul, li, a, img {
+body, header, nav, main, footer,
+h1, h2, p, ul, li, a, img,
+section, article, aside, figure, figcaption {
     margin: 0;
     padding: 0;
     border: 0;
