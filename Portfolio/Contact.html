@@ -2,7 +2,7 @@
 <!--
 Student Name: Christian Lepard
 File Name: contact.html
-Date: 02/08/2026
+Created: 02/22/2026
 -->
 <html lang="en">
 <head>
@@ -12,55 +12,67 @@ Date: 02/08/2026
 </head>
 <body>
 
+<!-- =======================
+     HEADER
+======================= -->
 <header>
+    <h1>Christian Lepard</h1>
     <figure>
-        <img src="images/christianlepard.jpg" alt="Photo of Christian Lepard">
+        <img src="images/christian-lepard.jpg" alt="Photo of Christian Lepard">
         <figcaption>Learning, Creating, Sharing</figcaption>
     </figure>
-
-    <h1>Christian Lepard</h1>
 </header>
 
+<!-- =======================
+     NAVIGATION
+======================= -->
+<nav>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-    <nav>
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <main>
-        <section id="contact">
+<!-- =======================
+     MAIN CONTENT
+======================= -->
+<main>
+    <section id="contact">
+        <!-- =======================
+             CONTACT INFORMATION
+        ======================= -->
+        <article class="contact-info">
             <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:clepard0113161@point.edu">clepard0113161@point.edu</a></p>
-            <p>Point University</p>
+            <p><strong>Email:</strong> <a href="mailto:clepard0113161@point.edu">clepard0113161@point.edu</a></p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Address:</strong> Point University, 123 College Street, West Point, GA 31833</p>
+        </article>
 
+        <!-- =======================
+             LOCATION MAP
+        ======================= -->
+        <aside>
             <h3>Location Map</h3>
             <iframe
                 src="https://www.google.com/maps?q=Point+University&output=embed"
-                width="600"
-                height="450"
+                width="100%"
+                height="300"
                 style="border:0;"
                 allowfullscreen
                 loading="lazy">
             </iframe>
-        </div>
-    </main>
+        </aside>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2026 Christian Lepard | Email: 
-           <a href="mailto:clepard0113161@point.edu">clepard0113161@point.edu</a>
-        </p>
-    </footer>
+<!-- =======================
+     FOOTER
+======================= -->
+<footer>
+    <p>&copy; 2026 Christian Lepard | <a href="mailto:clepard0113161@point.edu">clepard0113161@point.edu</a></p>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
