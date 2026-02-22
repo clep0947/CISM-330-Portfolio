@@ -70,3 +70,28 @@ footer {
     padding: 15px;
     font-size: 0.9em;
 }
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Project card styling */
+.project-card {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Header text shadow */
+header h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Responsive grid */
+@media (min-width: 768px) {
+    #projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
