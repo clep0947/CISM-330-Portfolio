@@ -1,3 +1,5 @@
+
+  
 /*
 Christian Lepard
 02/22/2026
@@ -5,28 +7,31 @@ styles.css
 */
 
 /* =======================
-   CSS RESET (Task 1 & 2)
-   ======================= */
+   CSS RESET
+======================= */
 body, header, nav, main, footer,
 h1, h2, h3, p, ul, li, a, img,
-section, article, aside, figure, figcaption {
+section, article, aside, figure, figcaption,
+table, thead, tbody, th, td, form, input, label, textarea, button {
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 /* =======================
-   GLOBAL STYLES
-   ======================= */
+   BODY
+======================= */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #000000;
 }
 
 /* =======================
    HEADER
-   ======================= */
+======================= */
 header {
     background-color: #0b3d2e;
     color: #ffffff;
@@ -34,37 +39,33 @@ header {
     padding: 20px;
 }
 
-/* Text shadow (Task 6) */
 header h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
-/* Figure in header (Task 2) */
-figure {
-    max-width: 300px;
+header figure {
+    margin: 10px auto;
+}
+
+header img {
+    max-width: 150px;
+    display: block;
     margin: 0 auto;
 }
 
-/* Box shadow (Task 6) */
-figure img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-figcaption {
-    margin-top: 10px;
+header figcaption {
     font-style: italic;
-    color: #e0e0e0;
+    margin-top: 5px;
 }
 
 /* =======================
    NAVIGATION
-   ======================= */
+======================= */
 .nav-list {
-    list-style-type: none;
+    list-style-type: none; /* removes bullets */
     background-color: #145c43;
     text-align: center;
+    padding: 10px 0;
 }
 
 .nav-list li {
@@ -73,7 +74,7 @@ figcaption {
 }
 
 .nav-list a {
-    text-decoration: none;
+    text-decoration: none; /* removes underline */
     color: #ffffff;
     font-weight: bold;
 }
@@ -83,58 +84,90 @@ figcaption {
 }
 
 /* =======================
-   MAIN LAYOUT (Grid — Task 5)
-   ======================= */
+   MAIN
+======================= */
 main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
     padding: 20px;
 }
 
-/* Content sections */
-section, article, aside {
+/* =======================
+   ABOUT / ARTICLE CONTENT
+======================= */
+#about {
     background-color: #ffffff;
-    padding: 15px;
-}
-
-/* About section */
-#about-content {
+    padding: 20px;
     margin-bottom: 20px;
 }
 
-/* Contact section */
-.contact-info {
-    background-color: #ffffff;
+/* =======================
+   TABLE STYLING
+======================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #0b3d2e;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #145c43;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    table {
+        display: none; /* hide table on mobile */
+    }
 }
 
 /* =======================
-   PROJECT GRID
-   ======================= */
-#projects-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-/* Project cards */
-.project-card {
+   FORM STYLING
+======================= */
+form {
     background-color: #ffffff;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
 }
 
-/* =======================
-   IMAGES
-   ======================= */
-img {
-    max-width: 100%;
+form label {
     display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="submit"] {
+    background-color: #0b3d2e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #145c43;
 }
 
 /* =======================
    FOOTER
-   ======================= */
+======================= */
 footer {
     background-color: #0b3d2e;
     color: #ffffff;
@@ -144,19 +177,22 @@ footer {
 }
 
 /* =======================
-   RESPONSIVE DESIGN (Task 8)
-   ======================= */
+   PROJECTS GRID
+======================= */
+#projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 
-/* Tablet */
+.project-card {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 @media (min-width: 768px) {
     #projects-grid {
         grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Mobile layout */
-@media (max-width: 767px) {
-    main {
-        grid-template-columns: 1fr;
     }
 }
